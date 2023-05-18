@@ -12,9 +12,9 @@
 }
 
 .form{
-    width: 50%;
+    width: 40%;
     height: 100vh;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,11 +23,12 @@
 }
 
 .img{
-    width: 50%;
+    width: 60%;
     height: 100vh;
     background-color: red;
     text-align: center;
     background-color: #fd7e14;
+
 }
 
 .input{
@@ -39,6 +40,7 @@
     height: 60px;
     font-size: xx-large;
     padding: 15px;
+    border: 2px solid black
 }
 
 .title{
@@ -48,5 +50,5 @@
 
 .banner{
     width: 650px;
-    line-height: -50%;
+    margin-top: 25%;
 }
