@@ -8,12 +8,12 @@ function App() {
     const response = await fetch(url, options);
     const json = await response.json();
     setTime(json);
-  }
+  };
 
   useEffect(() => {
     handleAsync();
     console.log(time);
-  }, []);
+  }, [time]);
 
 
   return (
