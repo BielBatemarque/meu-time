@@ -17,7 +17,7 @@ export const LoginPage = () => {
         };
         const login = await fetch(url, options);
         if(login.status === 200){
-            console.log('deu certo');
+            window.location = window.location + 'Home';
         }else{
             console.log(login.status);
         }
