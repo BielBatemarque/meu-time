@@ -1,7 +1,8 @@
 import './MenuItem.css';
+import { Link } from 'react-router-dom';
 
-export const MenuItem = ({ text }) => {
+export const MenuItem = ({ text, link }) => {
     return(
-        <h3>{text}</h3>
+        <Link to={link}>{text}</Link>
     );
 }

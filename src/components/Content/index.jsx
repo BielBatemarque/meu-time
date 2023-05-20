@@ -4,7 +4,7 @@ import { Home } from '../../pages/Home/index';
 export const Content = () => {
     return(
         <Routes>
-            <Route path='/Home' element={<Home />} />
+            <Route path='/Home' element={<Home />} exact/>
         </Routes>
     );
 }

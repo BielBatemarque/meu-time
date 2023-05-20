@@ -1,3 +1,14 @@
-.menuItens{
+.menu{
+    margin-top: 1rem;
+}
+
+.menuItens nav ul {
     display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.items{
+    width: 40%;
+    margin: 0 auto;
 }

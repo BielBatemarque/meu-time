@@ -4,11 +4,23 @@ import './Menu.css';
 export const Menu = () => {
     return(
         <div className="menu">
-            <h2>Componente Menu</h2>
             <div className="menuItens">
-                <MenuItem text={'opa'} />
-                <MenuItem text={'opa'} />
-                <MenuItem text={'opa'} />
+                <nav className='items'>
+                    <ul>
+                        <li>
+                            <MenuItem text={'Ligas'} link={'/Ligas'}/>
+                        </li>
+                        <li>
+                            <MenuItem text={'Ligas'} />
+                        </li>
+                        <li>
+                            <MenuItem text={'Ligas'} />
+                        </li>
+                        <li>
+                            <MenuItem text={'Ligas'} />
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     );   
