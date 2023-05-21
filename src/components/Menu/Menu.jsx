@@ -8,7 +8,7 @@ export const Menu = () => {
                 <nav className='items'>
                     <ul>
                         <li>
-                            <MenuItem text={'Ligas'} link={'/Ligas'}/>
+                            <MenuItem text={'Ligas'} link={'/link'}/>
                         </li>
                         <li>
                             <MenuItem text={'Ligas'} />

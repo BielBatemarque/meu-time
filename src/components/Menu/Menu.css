@@ -1,5 +1,8 @@
 .menu{
     margin-top: 1rem;
+    height: 2rem;
+    background-color: #fd7e14;
+    margin: 0;
 }
 
 .menuItens nav ul {
@@ -7,6 +10,15 @@
     justify-content: space-around;
     list-style-type: none;
 }
+
+.menuItens nav ul li {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 3px;
+    color: black;
+}
+
 
 .items{
     width: 40%;
