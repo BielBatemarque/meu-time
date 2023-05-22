@@ -4,7 +4,7 @@ import './Ligas.css';
 import { options } from '../../data/data';
 
 export const Ligas = () => {
-    const[ligas, setLigas] = useState([]);
+    const[ligas, setLigas] = useState({});
 
     useEffect(() =>{
         fetchApi();
@@ -18,6 +18,9 @@ export const Ligas = () => {
         setLigas(json);
     } 
       console.log(ligas);
+    
+      const { response } = ligas;
+      console.log(response);
 
     return(
         <div className="Ligas">
