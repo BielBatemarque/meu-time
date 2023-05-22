@@ -11,18 +11,19 @@ export const Ligas = () => {
     }, []);
 
     const fetchApi = async () => {
+        const api = 'https://api-football-v1.p.rapidapi.com/v3/leagues?country=England';
 
-        const api = await fetch('https://api-football-v1.p.rapidapi.com/v3/leagues?country=England', options);
-        const json = await api.json();
+        const request = await fetch(api, options);
+        const json = await request.json();
         setLigas(json);
-        console.log(ligas);
     } 
+      console.log(ligas);
 
     return(
         <div className="Ligas">
             <Menu />
             <div className='Ligas'>
-                <p>{}</p>
+                
             </div>
         </div>
     );
