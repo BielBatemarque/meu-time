@@ -18,16 +18,20 @@ export const Ligas = () => {
         setLigas(json);
     } 
 
-       const { response } = ligas;
-      console.log(response);
-
+    const { response } = ligas;
+    console.log(response);
+    
     return(
         <div className="Ligas">
             <Menu />
-            {/* {ligas === false ? <p>carregando ligas</p> :
-                response.map(liga => (
-                    <div>{liga.league.name}</div>
-            ))} */}
+            <h1 className='mainTitle'>Ligas</h1>
+            <div className='listaLigas'>
+                {!response ? <div>Carregando</div> : response.map(liga => (
+                    <div key={liga.league.id}>
+                        <h3>{liga.league.name}</h3>
+                    </div>
+                ))}                     
+            </div>
         </div>
     );
 }
