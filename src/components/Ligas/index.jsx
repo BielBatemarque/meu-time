@@ -9,25 +9,25 @@ export const Ligas = () => {
     useEffect(() =>{
         fetchApi();
     }, []);
-
+    
     const fetchApi = async () => {
-        const api = 'https://api-football-v1.p.rapidapi.com/v3/leagues?country=England';
+        const api = 'https://api-football-v1.p.rapidapi.com/v3/leagues';
 
         const request = await fetch(api, options);
         const json = await request.json();
         setLigas(json);
     } 
-      console.log(ligas);
-    
-      const { response } = ligas;
+
+       const { response } = ligas;
       console.log(response);
 
     return(
         <div className="Ligas">
             <Menu />
-            <div className='Ligas'>
-                
-            </div>
+            {/* {ligas === false ? <p>carregando ligas</p> :
+                response.map(liga => (
+                    <div>{liga.league.name}</div>
+            ))} */}
         </div>
     );
 }
