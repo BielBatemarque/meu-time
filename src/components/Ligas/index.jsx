@@ -8,12 +8,11 @@ export const Ligas = () => {
     const[ligas, setLigas] = useState({});
 
     useEffect(() =>{
-        fetchApi();
+        handleFetch();
     }, []);
     
-    const fetchApi = async () => {
+    const handleFetch = async () => {
         const api = 'https://api-football-v1.p.rapidapi.com/v3/leagues';
-
         const request = await fetch(api, options);
         const json = await request.json();
         setLigas(json);
