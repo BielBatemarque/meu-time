@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Menu } from '../Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
+import { Loader } from '../Loader';
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState({});
@@ -26,7 +27,9 @@ export const Ligas = () => {
             <Menu />
             <h1 className='mainTitle'>Ligas</h1>
             <div className='listaLigas'>
-                {!response ? <div>Carregando</div> : response.map(liga => (
+                {!response ? 
+                    <Loader text={'carregando'} />
+                : response.map(liga => (
                     <div key={liga.league.id} className='card'>
                         <h3>{liga.league.name}</h3>
                         <span className="text">{liga.country.name}</span>
