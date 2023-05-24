@@ -3,9 +3,14 @@ import { Menu } from '../Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
 import { Loader } from '../Loader';
+import { Input } from '../Input';
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState({});
+    const[allLeagues, setAllLeagues] = useState([]);
+    const[pages, setAllPages] = useState(0);
+    const[leaguesPerpage] = useState(0);
+    const[searchValue, setSearchValue] = useState('');
 
     useEffect(() =>{
         handleFetch();
@@ -25,6 +30,7 @@ export const Ligas = () => {
         <div className="Ligas">
             <Menu />
             <h1 className='mainTitle'>Ligas</h1>
+            <Input text={'Pesquisar Liga'} />
             <div className='listaLigas'>
                 {!response ? 
                     <Loader text={'carregando'} />
