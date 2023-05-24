@@ -27,10 +27,12 @@ export const Ligas = () => {
             <h1 className='mainTitle'>Ligas</h1>
             <div className='listaLigas'>
                 {!response ? <div>Carregando</div> : response.map(liga => (
-                    <div key={liga.league.id}>
+                    <div key={liga.league.id} className='card'>
                         <h3>{liga.league.name}</h3>
+                        <span className="text">{liga.country.name}</span>
+                        <img src={liga.league.logo} alt="logo ligas" className='logos'/>
                     </div>
-                ))}                     
+                ))}
             </div>
         </div>
     );
