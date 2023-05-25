@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 import { Menu } from '../Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
@@ -37,10 +37,15 @@ export const Ligas = () => {
         console.log('carregar mais ligas');
     }
 
-    const filteredLeagues = !!searchValue ? allLeagues.filter(league => {
-       return league.league.name.toLowerCase().includes(searchValue.toLocaleLowerCase());
-   })
-    : ligas;
+    const filteredLeagues = useMemo(() => {
+        if (!!searchValue) {
+          return allLeagues.filter(league =>
+            league.league.name.toLowerCase().includes(searchValue.toLowerCase())
+          );
+        } else {
+          return ligas;
+        }
+      }, [searchValue, allLeagues, ligas]);
 
     const handleChange = (e) => {
         const value = e.target.value;
