@@ -4,11 +4,12 @@ import './Ligas.css';
 import { options } from '../../data/data';
 import { Loader } from '../Loader';
 import { Input } from '../Input';
+import { Button } from '../button';
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState([]);
     const[allLeagues, setAllLeagues] = useState([]);
-    const[pages, setAllPages] = useState(0);
+    const[pages, setPages] = useState(0);
     const[leaguesPerpage] = useState(15);
     const[searchValue, setSearchValue] = useState('');
 
@@ -32,12 +33,18 @@ export const Ligas = () => {
         return response;
     };
 
-    console.log(ligas);
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        setSearchValue(value);
+    }
+
+    console.log(ligas, searchValue);
     return(
         <div className="Ligas">
             <Menu />
             <h1 className='mainTitle'>Ligas</h1>
-            <Input text={'Pesquisar Liga'} />
+            <Input text={'Pesquisar Liga'} search={handleChange}/>
             <div className='listaLigas'>
                 {!ligas ? 
                     <Loader text={'carregando'} />
@@ -48,6 +55,10 @@ export const Ligas = () => {
                         <img src={liga.league.logo} alt="logo ligas" className='logos'/>
                     </div>
                 ))}
+            </div>
+
+            <div className="button-container">
+                <Button text={'carregar mais ligas'} />
             </div>
         </div>
     );
