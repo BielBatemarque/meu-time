@@ -32,9 +32,6 @@ export const Ligas = () => {
         return response;
     };
 
-
-    // const { response } = ligas;
-    // console.log(response);
     console.log(ligas);
     return(
         <div className="Ligas">
