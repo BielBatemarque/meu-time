@@ -2,6 +2,7 @@
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .InputComponent{
@@ -10,4 +11,5 @@
     border: 1.5px solid #fd7e14;
     border-radius: 15px;
     text-align: center;
+    margin-bottom: 1rem;
 }
