@@ -33,6 +33,14 @@ export const Ligas = () => {
         return response;
     };
 
+    const loadMoreLeagues = () => {
+        console.log('carregar mais ligas');
+    }
+
+    const filteredLeagues = !!searchValue ? allLeagues.filter(league => {
+        return ligas.league.name.toLowerCase().includes(searchValue.toLocaleLowerCase());
+    })
+    : ligas;
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -58,7 +66,7 @@ export const Ligas = () => {
             </div>
 
             <div className="button-container">
-                <Button text={'carregar mais ligas'} />
+                <Button text={'carregar mais ligas'} action={loadMoreLeagues}/>
             </div>
         </div>
     );
