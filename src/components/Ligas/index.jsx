@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Menu } from '../Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
@@ -38,8 +38,8 @@ export const Ligas = () => {
     }
 
     const filteredLeagues = !!searchValue ? allLeagues.filter(league => {
-        return ligas.league.name.toLowerCase().includes(searchValue.toLocaleLowerCase());
-    })
+       return league.league.name.toLowerCase().includes(searchValue.toLocaleLowerCase());
+   })
     : ligas;
 
     const handleChange = (e) => {
@@ -54,15 +54,26 @@ export const Ligas = () => {
             <h1 className='mainTitle'>Ligas</h1>
             <Input text={'Pesquisar Liga'} search={handleChange}/>
             <div className='listaLigas'>
-                {!ligas ? 
-                    <Loader text={'carregando'} />
-                : ligas.map(liga => (
-                    <div key={liga.league.id} className='card'>
+                {
+                    filteredLeagues > 0 ?
+                    !ligas ? 
+                        <Loader text={'carregando'} />
+                        : ligas.map(liga => (
+                            <div key={liga.league.id} className='card'>
                         <h3>{liga.league.name}</h3>
                         <span className="text">{liga.country.name}</span>
                         <img src={liga.league.logo} alt="logo ligas" className='logos'/>
                     </div>
-                ))}
+                ))
+                : 
+                filteredLeagues.map(liga => (
+                    <div key={liga.league.id} className='card'>
+                <h3>{liga.league.name}</h3>
+                <span className="text">{liga.country.name}</span>
+                <img src={liga.league.logo} alt="logo ligas" className='logos'/>
+            </div>
+        ))
+            }
             </div>
 
             <div className="button-container">
