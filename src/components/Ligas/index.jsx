@@ -47,8 +47,7 @@ export const Ligas = () => {
     const filteredLeagues = useMemo(() => {
         if (!!searchValue) {
           return allLeagues.filter(league =>
-            league.league.name.toLowerCase().includes(searchValue.toLowerCase())
-          );
+            league.league.name.toLowerCase().includes(searchValue.toLowerCase()));
         } else {
           return ligas;
         }
