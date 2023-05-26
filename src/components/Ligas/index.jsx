@@ -9,7 +9,7 @@ import { Button } from '../button';
 export const Ligas = () => {
     const[ligas, setLigas] = useState([]);
     const[allLeagues, setAllLeagues] = useState([]);
-    const[pages, setPages] = useState(0);
+    const[page, setPage] = useState(0);
     const[leaguesPerpage] = useState(15);
     const[searchValue, setSearchValue] = useState('');
 
@@ -34,8 +34,15 @@ export const Ligas = () => {
     };
 
     const loadMoreLeagues = () => {
-        console.log('carregar mais ligas');
+        const nextPage = page + leaguesPerpage;
+        const nextLeagues = allLeagues.slice(nextPage, nextPage + leaguesPerpage);
+        ligas.push(...nextLeagues);
+
+        setLigas(ligas);
+        setPage(nextPage);
     }
+
+    const noMoreLeague = page + leaguesPerpage >= allLeagues.length;
 
     const filteredLeagues = useMemo(() => {
         if (!!searchValue) {
@@ -47,8 +54,9 @@ export const Ligas = () => {
         }
       }, [searchValue, allLeagues, ligas]);
 
+
     const handleChange = (e) => {
-        const value = e.target.value;
+        const { value }  = e.target;
         setSearchValue(value);
     }
 
@@ -82,7 +90,7 @@ export const Ligas = () => {
             </div>
 
             <div className="button-container">
-                <Button text={'carregar mais ligas'} action={loadMoreLeagues}/>
+                <Button text={'carregar mais ligas'} action={loadMoreLeagues} disabled={noMoreLeague}/>
             </div>
         </div>
     );
