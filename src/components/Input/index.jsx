@@ -6,4 +6,4 @@ export const Input = ({ search, value, text }) => {
             <input type="search" className="InputComponent" onChange={search} value={value} placeholder={text}/>
         </div>
     );
-}
+};
