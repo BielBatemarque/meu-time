@@ -5,6 +5,7 @@ import { options } from '../../data/data';
 import { Loader } from '../Loader';
 import { Input } from '../Input';
 import { Button } from '../button';
+import { Card } from '../Card';
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState([]);
@@ -71,19 +72,21 @@ export const Ligas = () => {
                     !ligas ? 
                         <Loader text={'carregando'} />
                         : ligas.map(liga => (
-                            <div key={liga.league.id} className='card'>
-                        <h3>{liga.league.name}</h3>
-                        <span className="text">{liga.country.name}</span>
-                        <img src={liga.league.logo} alt="logo ligas" className='logos'/>
-                    </div>
+                            <Card 
+                            logo={liga.league.logo} 
+                            description={liga.country.name} 
+                            title={liga.league.name} 
+                            key={liga.country.name}
+                            />
                 ))
                 : 
                 filteredLeagues.map(liga => (
-                    <div key={liga.league.id} className='card'>
-                <h3>{liga.league.name}</h3>
-                <span className="text">{liga.country.name}</span>
-                <img src={liga.league.logo} alt="logo ligas" className='logos'/>
-            </div>
+                    <Card 
+                    logo={liga.league.logo} 
+                    description={liga.country.name} 
+                    title={liga.league.name} 
+                    key={liga.country.name}
+                    />
         ))
             }
             </div>
