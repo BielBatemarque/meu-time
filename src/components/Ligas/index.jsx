@@ -5,7 +5,9 @@ import { options } from '../../data/data';
 import { Loader } from '../Loader';
 import { Input } from '../Input';
 import { Button } from '../button';
-import { Card } from '../Card/index'
+import { Card } from '../Card/index';
+
+export let idLiga = 39;
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState([]);
