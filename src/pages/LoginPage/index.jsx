@@ -15,6 +15,7 @@ export const LoginPage = () => {
                 'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
             }
         };
+        
         const login = await fetch(url, options);
         if(login.status === 200){
             window.location = window.location + 'Home';
