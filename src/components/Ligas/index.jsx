@@ -16,6 +16,7 @@ export const Ligas = () => {
     const[leaguesPerpage] = useState(15);
     const[searchValue, setSearchValue] = useState('');
 
+
     const handleLoadLeagues = useCallback(async (page, ligasPorPagina) => {
         const carregaLigas = await handleFetch();
         
@@ -74,7 +75,7 @@ export const Ligas = () => {
                     !ligas ? 
                         <Loader text={'carregando'} />
                         : ligas.map(liga => (
-                            <Card description={liga.country.name} logo={liga.league.logo} title={liga.league.name} key={liga.league.id}/>
+                            <Card description={liga.country.name} logo={liga.league.logo} title={liga.league.name} key={liga.league.id} id={liga.league.id}/>
                 ))
                 : 
                 filteredLeagues.map(liga => (
