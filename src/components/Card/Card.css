@@ -9,7 +9,7 @@
     border-radius: 1.2rem;
     justify-content: space-around;
     box-shadow: 3px 3px 5px black;
-
+    align-items: center;
 }
 
 .log{
@@ -19,4 +19,22 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+.btnVerMais{
+    height: 80px;
+    padding: 1.5rem;
+    width: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: #fd7e14;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+}
+
+.btnVerMais:hover{
+    background-color: white;
+    transition: 0.8s;
+    color: #fd7e14;
 }

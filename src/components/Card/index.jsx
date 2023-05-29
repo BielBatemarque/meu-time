@@ -1,13 +1,16 @@
 import './Card.css';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-export const Card = ({ logo, title, description, viewMore, id }) => {
+export const Card = ({ logo, title, description, cardId }) => {
+    const [id, setId] = useState(null);
+    console.log(id);
+    
     return(
         <div className="Cards" id={id}>
             <img src={logo} alt="logo ligas" className='log'/>
             <h3>{title}</h3>
             <span className="text">{description}</span>
-                <Link to={viewMore}>Ver mais</Link>
+            <button className='btnVerMais' onClick={() => setId(cardId)}> ver mais</button>
         </div>
     );
 }

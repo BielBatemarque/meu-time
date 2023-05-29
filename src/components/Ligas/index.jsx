@@ -7,7 +7,6 @@ import { Input } from '../Input';
 import { Button } from '../button';
 import { Card } from '../Card/index';
 
-export let idLiga = 39;
 
 export const Ligas = () => {
     const[ligas, setLigas] = useState([]);
@@ -15,6 +14,7 @@ export const Ligas = () => {
     const[page, setPage] = useState(0);
     const[leaguesPerpage] = useState(15);
     const[searchValue, setSearchValue] = useState('');
+    const[selectedId, setSelectedId] = useState(null);
 
 
     const handleLoadLeagues = useCallback(async (page, ligasPorPagina) => {
@@ -75,11 +75,21 @@ export const Ligas = () => {
                     !ligas ? 
                         <Loader text={'carregando'} />
                         : ligas.map(liga => (
-                            <Card description={liga.country.name} logo={liga.league.logo} title={liga.league.name} key={liga.league.id} id={liga.league.id}/>
+                            <Card description={liga.country.name} 
+                            logo={liga.league.logo} 
+                            title={liga.league.name} 
+                            key={liga.league.id} 
+                            cardId={liga.league.id}
+                            />
                 ))
                 : 
                 filteredLeagues.map(liga => (
-                    <Card description={liga.country.name} logo={liga.league.logo} title={liga.league.name} key={liga.league.id}/>
+                    <Card description={liga.country.name} 
+                    logo={liga.league.logo} 
+                    title={liga.league.name} 
+                    key={liga.league.id} 
+                    cardId={liga.league.id}
+                    />
         ))
             }
             </div>
