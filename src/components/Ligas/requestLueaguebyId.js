@@ -1,7 +1,8 @@
+import { useContext } from 'react';
 import { options } from '../../data/data';
-import { Card } from '../Card/index';
+import { CardContext } from '../Card/index';
 
-const { id } = Card();
+const { id } = useContext(CardContext);
 const url = `https://api-football-v1.p.rapidapi.com/v3/leagues?id=${id}`;
 
 export const infoLigas = async () => {
