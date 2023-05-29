@@ -14,9 +14,7 @@ export const Ligas = () => {
     const[page, setPage] = useState(0);
     const[leaguesPerpage] = useState(15);
     const[searchValue, setSearchValue] = useState('');
-    const[selectedId, setSelectedId] = useState(null);
-
-
+    
     const handleLoadLeagues = useCallback(async (page, ligasPorPagina) => {
         const carregaLigas = await handleFetch();
         

@@ -1,10 +1,10 @@
 import './Card.css';
 import { useState } from 'react';
 
-export const Card = ({ logo, title, description, cardId }) => {
+export const Card = ({ logo, title, description, cardId, action }) => {
     const [id, setId] = useState(null);
     console.log(id);
-    
+
     return(
         <div className="Cards" id={id}>
             <img src={logo} alt="logo ligas" className='log'/>
