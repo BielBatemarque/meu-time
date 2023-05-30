@@ -5,7 +5,7 @@ import { LoginPage } from '../../pages/LoginPage';
 import { Jogadores } from '../Jogadores/index';
 import { Temporadas } from '../Temporadas/index';
 import { Times } from '../Times'
-import { ViewMoreLeagues } from '../ViewMoreLeagues/index';
+
 export const Content = () => {
     return(
         <Routes>
@@ -15,7 +15,6 @@ export const Content = () => {
             <Route path='/Temporadas' element={<Temporadas />}/>
             <Route path='/Times' element={<Times />}/>
             <Route path='/Ligas' element={<Ligas />} exact/>
-            <Route path='/ViewMoreLeagues' element={<ViewMoreLeagues />} />
         </Routes>
     );
 }
