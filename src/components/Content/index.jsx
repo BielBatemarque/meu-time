@@ -10,7 +10,7 @@ import { ViewMoreLeague } from '../ViewMoreLeague';
 export const Content = () => {
     return(
         <Routes>
-             <Route path='/' element={<LoginPage />} exact/>
+            <Route path='/' element={<LoginPage />} exact/>
             <Route path='/Home' element={<Home />} exact/>
             <Route path='/Jogadores' element={<Jogadores />}/>
             <Route path='/Temporadas' element={<Temporadas />}/>
