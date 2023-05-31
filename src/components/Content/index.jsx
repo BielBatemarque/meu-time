@@ -16,7 +16,7 @@ export const Content = () => {
             <Route path='/Temporadas' element={<Temporadas />}/>
             <Route path='/Times' element={<Times />}/>
             <Route path='/Ligas' element={<Ligas />} exact/>
-            <Route path='/vermaisLiga/' element={<ViewMoreLeague />} />
+            <Route path='/ViewMoreLeague/:id' element={<ViewMoreLeague />} />
         </Routes>
     );
 }
