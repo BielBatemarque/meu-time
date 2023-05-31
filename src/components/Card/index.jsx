@@ -1,7 +1,7 @@
 import './Card.css';
 import { useState } from 'react';
 
-export const Card = ({ logo, title, description, cardId, action }) => {
+export const Card = ({ logo, title, description, cardId }) => {
     const [id, setId] = useState(null);
     console.log(id);
 
