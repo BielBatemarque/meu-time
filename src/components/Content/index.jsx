@@ -5,6 +5,7 @@ import { LoginPage } from '../../pages/LoginPage';
 import { Jogadores } from '../Jogadores/index';
 import { Temporadas } from '../Temporadas/index';
 import { Times } from '../Times'
+import { ViewMoreLeague } from '../ViewMoreLeague';
 
 export const Content = () => {
     return(
@@ -15,6 +16,7 @@ export const Content = () => {
             <Route path='/Temporadas' element={<Temporadas />}/>
             <Route path='/Times' element={<Times />}/>
             <Route path='/Ligas' element={<Ligas />} exact/>
+            <Route path='/vermaisLiga/' element={<ViewMoreLeague />} />
         </Routes>
     );
 }
