@@ -24,6 +24,7 @@ export const ViewMoreLeague = ({ match }) => {
 
     useEffect(() => {
         request();
+        console.log(response);
     }, []);
 
     console.log(inforLigas);
@@ -31,7 +32,6 @@ export const ViewMoreLeague = ({ match }) => {
     return(
         <div className="ViewMoreLeague">
             <Menu />
-
         </div>
     );
 }
