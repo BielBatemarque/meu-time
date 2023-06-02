@@ -6,22 +6,24 @@ import { options } from '../../data/data';
 
 export const ViewMoreLeague = ({ match }) => {
     const { id } = useParams();
-    const [inforLigas, setInfoLigas] = useState();
+    const [inforLigas, setInfoLigas] = useState([]);
 
     let confirmId = id.substring(1);
     confirmId = Number(confirmId);
 
     const url = `https://api-football-v1.p.rapidapi.com/v3/leagues?id=${confirmId}`;
 
-    const getInfoLeagues = async () => {
+    const request = async () => {
         const request = await fetch(url, options);
         const json = await request.json();
-
-        setInfoLigas(json);
+        const { response } = json;
+         setInfoLigas(response);
     }
 
+    const { response } = inforLigas;
+
     useEffect(() => {
-        getInfoLeagues();
+        request();
     }, []);
 
     console.log(inforLigas);
@@ -29,7 +31,7 @@ export const ViewMoreLeague = ({ match }) => {
     return(
         <div className="ViewMoreLeague">
             <Menu />
-            <h1>{confirmId}</h1>
+
         </div>
     );
 }
