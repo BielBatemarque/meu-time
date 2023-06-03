@@ -16,22 +16,39 @@ export const ViewMoreLeague = ({ match }) => {
     const request = async () => {
         const request = await fetch(url, options);
         const json = await request.json();
-        const { response } = json;
-         setInfoLigas(response);
+        const { response } = await json;
+        console.log(response);
+        setInfoLigas(await response); 
     }
 
-    const { response } = inforLigas;
 
     useEffect(() => {
-        request();
-        console.log(response);
+       request();
     }, []);
-
-    console.log(inforLigas);
 
     return(
         <div className="ViewMoreLeague">
             <Menu />
+            {inforLigas.length === 0 ? <h1>carregando</h1> : 
+                inforLigas.map(r => (
+                    <div key={r.league.id}>
+                        <h3>{r.league.name}</h3>
+                        <img src={r.league.logo} alt="logo da liga" />
+                        <h4>Tipo: {r.league.type}</h4>
+
+                        <h3>Temporadas</h3>
+                        <div className="temporadas">
+                                {inforLigas[0].seasons.map(s => (
+                                <div key={s.year} className='divpaiLista' >
+                                    <div className='itemLista'>
+                                        <h3>Ano: {s.year}</h3>
+                                    </div>
+                                </div>
+                                ))}
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     );
 }
