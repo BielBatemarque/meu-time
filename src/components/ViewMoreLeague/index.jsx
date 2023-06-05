@@ -42,6 +42,8 @@ export const ViewMoreLeague = ({ match }) => {
                                 <div key={s.year} className='divpaiLista' >
                                     <div className='itemLista'>
                                         <h3>Ano: {s.year}</h3>
+                                        <p>Começo: {s.start}</p>
+                                        <p>Fim: {s.end}</p>
                                     </div>
                                 </div>
                                 ))}
