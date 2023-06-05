@@ -22,6 +22,7 @@ export const LoginPage = () => {
         const login = await fetch(url, options);
         if(login.status === 200){
             dispatch({type: 'autentication', payload: key});
+            console.log(globalState);
             window.location = window.location + 'Home';
         }else{
             console.log(login.status);
