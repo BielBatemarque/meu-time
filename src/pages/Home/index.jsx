@@ -1,4 +1,5 @@
 import { Menu } from '../../components/Menu/Menu';
+import { Button } from '../../components/button';
 import './Home.css';
 
 export const Home = () => {
@@ -10,6 +11,7 @@ export const Home = () => {
             </div>
             <section className='section-home'>
                 <p>sessão de apresentação</p>
+                <Button text={'Lougout'} action={() => console.log('deslogar criando um estado global da função que seta algumas informações como logado')}/>
             </section>
             <section>
                 <p>sessão sobre apresentação da aplicação</p>
@@ -17,7 +19,6 @@ export const Home = () => {
             <section>
                 <p>apresenta times e ligas</p>
             </section>
-
         </div>
     );
 }
