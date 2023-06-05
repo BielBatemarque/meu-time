@@ -1,13 +1,8 @@
-import { useContext } from 'react';
 import { Menu } from '../../components/Menu/Menu';
 import { Button } from '../../components/button';
 import './Home.css';
-import { globalContext } from '../../context/globalContext';
 
 export const Home = () => {
-    const contexto = useContext(globalContext);
-    console.log(contexto);
-
     return(
         <div className="Home">
             <Menu />
