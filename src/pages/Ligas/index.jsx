@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState, useMemo } from 'react';
-import { Menu } from '../Menu/Menu';
+import { Menu } from '../../components/Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
-import { Loader } from '../Loader';
-import { Input } from '../Input';
-import { Button } from '../button';
-import { Card } from '../Card/index';
+import { Loader } from '../../components/Loader/index';
+import { Input } from '../../components/Input/index';
+import { Button } from '../../components/button/index';
+import { Card } from '../../components/Card/index';
 
 
 export const Ligas = () => {

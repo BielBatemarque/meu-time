@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 import { Home } from '../../pages/Home/index';
-import { Ligas } from '../Ligas';
+import { Ligas } from '../../pages/Ligas/index';
 import { LoginPage } from '../../pages/LoginPage';
 import { Jogadores } from '../Jogadores/index';
 import { Temporadas } from '../Temporadas/index';
