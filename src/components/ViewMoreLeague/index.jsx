@@ -31,7 +31,7 @@ export const ViewMoreLeague = ({ match }) => {
             <Menu />
             {inforLigas.length === 0 ? <h1>carregando</h1> : 
                 inforLigas.map(r => (
-                    <div key={r.league.id}>
+                    <div key={r.league.id} className='info'>
                         <h3>{r.league.name}</h3>
                         <img src={r.league.logo} alt="logo da liga" />
                         <h4>Tipo: {r.league.type}</h4>
