@@ -35,11 +35,10 @@ export const ViewMoreLeague = ({ match }) => {
                         <h3>{r.league.name}</h3>
                         <img src={r.league.logo} alt="logo da liga" />
                         <h4>Tipo: {r.league.type}</h4>
-
                         <h3>Temporadas</h3>
                         <div className="temporadas">
                                 {inforLigas[0].seasons.map(s => (
-                                <div key={s.year} className='divpaiLista' >
+                                <div key={s.year} className='divpaiLista'>
                                     <div className='itemLista'>
                                         <h3>Ano: {s.year}</h3>
                                         <p>Começo: {s.start}</p>
