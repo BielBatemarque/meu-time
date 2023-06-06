@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 
 export const globalState = {
     logado: false,
@@ -7,13 +7,20 @@ export const globalState = {
 
 export const globalContext = React.createContext(globalState);
 
+export const AppContext = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, globalState);
+
+    return(
+        <globalContext.Provider value={{ state, dispatch }}>{children}</globalContext.Provider>
+    )
+}
+
 export const reducer = (state, action) => {
     switch(action.type){
         case 'autentication':
-            return {...state, logado: true,key: action.payload};
+            return {...state, logado: true, key: action.payload};
 
         default:
             return{...state};
     }
-    
 }
