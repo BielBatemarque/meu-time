@@ -4,8 +4,7 @@ export const Loader = ({ text }) => {
     return(
         <>
             <h3>{text}</h3>
-            <div className="loader">
-            </div>
+            <div className="custom-loader"></div>
         </>
     );
 };
