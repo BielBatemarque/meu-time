@@ -19,6 +19,9 @@ export const reducer = (state, action) => {
     switch(action.type){
         case 'autentication':
             return {...state, logado: true, key: action.payload};
+        
+        case 'logout':
+            return {...state, logado: false, key: null};
 
         default:
             return{...state};
