@@ -13,4 +13,13 @@
     width: 100%;
     text-align: center;
     margin-top: 1rem;
+    display: flex;
+    padding: 4rem;
+}
+
+.dh1{
+    background-color: red;
+    width: 40%;
+    height: 50vh;
+    margin: 0 auto;
 }
