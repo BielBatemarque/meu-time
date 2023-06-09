@@ -22,4 +22,10 @@
     width: 40%;
     height: 50vh;
     margin: 0 auto;
+    text-align: center;
+
+}
+
+.imgcampo{
+    width: 550px;
 }
