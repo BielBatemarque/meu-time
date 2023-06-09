@@ -6,8 +6,8 @@ import { globalContext } from '../../context/globalContext';
 
 export const LoginPage = () => {
     const [key, setkey] = useState('');
-    const context = useContext(globalContext);
-    console.log(context.state);
+    const {state, dispatch} = useContext(globalContext);
+    console.log(state);
 
     const realizaLogn = async () => {
         const url = 'https://api-football-v1.p.rapidapi.com/v3/timezone';
@@ -15,13 +15,13 @@ export const LoginPage = () => {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': `${key}`,
-                'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+                'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
             }
         };
         
         const login = await fetch(url, options);
         if(login.status === 200){
-            context.dispatch({ type: 'autentication', payload: `${key}`})
+            dispatch({ type: 'autentication', payload: `${key}`});
             window.location = window.location + 'Home';
         }else{
             console.log(login.status);
