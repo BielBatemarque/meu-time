@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 export const globalState = {
     logado: false,
     key: null,
-}
+};
 
 export const globalContext = React.createContext(globalState);
 
@@ -12,8 +12,8 @@ export const AppContext = ({ children }) => {
 
     return(
         <globalContext.Provider value={{ state, dispatch }}>{children}</globalContext.Provider>
-    )
-}
+    );
+};
 
 export const reducer = (state, action) => {
     switch(action.type){
@@ -22,5 +22,5 @@ export const reducer = (state, action) => {
 
         default:
             return{...state};
-    }
-}
+    };
+};
