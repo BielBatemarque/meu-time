@@ -1,7 +1,9 @@
+
 import { Menu } from '../../components/Menu/Menu';
 import { Button } from '../../components/button';
-import './Home.css';
+import campo from '../../assets/campo.png';
 
+import './Home.css';
 export const Home = () => {
     return(
         <div className="Home">
@@ -10,8 +12,16 @@ export const Home = () => {
                 <h1>Meu-Time</h1>
             </div>
             <section className='section-home'>
-               <div className='dh1'></div>
-               <div className='dh1'></div>
+               <div className='dh1'>
+                    <h2 className='title-descricao'>Informações</h2>
+                    <p className='descricao'>Informações sobre Futebol, fazendo consumo da API publica disponibilizada pela API-Sportsbr <br />
+                    Sendo Possivel consultar tudo sobre o mundo do Futebol
+                    </p>
+
+               </div>
+               <div className='dh1'>
+                    <img src={campo} alt="campoIMG" className='imgcampo'/>
+               </div>
                
             </section>
             <section>
