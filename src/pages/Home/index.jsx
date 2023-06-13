@@ -1,6 +1,7 @@
 
 import { Menu } from '../../components/Menu/Menu';
 import { Button } from '../../components/button';
+import { Card } from '../../components/Card/index';
 import campo from '../../assets/campo.png';
 
 import './Home.css';
@@ -24,8 +25,11 @@ export const Home = () => {
                </div>
                
             </section>
-            <section>
-                <p>sessão sobre apresentação da aplicação</p>
+            <section className='cardList'>
+                <Card  />
+                <Card  />
+                <Card  />
+                <Card  />
             </section>
             <section>
                 <p>apresenta times e ligas</p>
