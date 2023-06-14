@@ -79,8 +79,7 @@ export const Ligas = () => {
                             key={liga.league.id} 
                             cardId={liga.league.id}
                             />
-                ))
-                : 
+                )): 
                 filteredLeagues.map(liga => (
                     <Card description={liga.country.name} 
                     logo={liga.league.logo} 
@@ -88,10 +87,8 @@ export const Ligas = () => {
                     key={liga.league.id} 
                     cardId={liga.league.id}
                     />
-        ))
-            }
+        ))}
             </div>
-
             <div className="button-container">
                 <Button text={'carregar mais ligas'} action={loadMoreLeagues} disabled={noMoreLeague}/>
             </div>
