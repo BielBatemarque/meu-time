@@ -2,7 +2,7 @@ import {Routes, Route} from 'react-router-dom';
 import { Home } from '../../pages/Home/index';
 import { Ligas } from '../../pages/Ligas/index';
 import { LoginPage } from '../../pages/LoginPage';
-import { Jogadores } from '../Jogadores/index';
+import { Jogadores } from '../../pages/Jogadores/index';
 import { Temporadas } from '../Temporadas/index';
 import { Times } from '../Times'
 import { ViewMoreLeague } from '../ViewMoreLeague';
