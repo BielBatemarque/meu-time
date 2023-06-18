@@ -5,6 +5,7 @@ export const Jogadores = () => {
     return(
         <div className="jogadores">
             <Menu />
+            
         </div>
     );
 }
