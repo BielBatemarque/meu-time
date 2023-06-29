@@ -26,10 +26,10 @@ export const Home = () => {
                
             </section>
             <section className='cardList'>
-                <Card  />
-                <Card  />
-                <Card  />
-                <Card  />
+                <Card title={'Ligas'} />
+                <Card  title={'Times'}/>
+                <Card  title={'Temporadas'}/>
+                <Card  title={'Jogadores'}/>
             </section>
             <section>
                 <p>apresenta times e ligas</p>
