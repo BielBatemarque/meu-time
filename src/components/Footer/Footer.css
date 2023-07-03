@@ -1,0 +1,41 @@
+.footer{
+    background-color: #fd7e14;
+    padding: 0.5rem;
+}
+
+.footer-title{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer p{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+.lista-redes-sociais{
+    width: 10%;
+    margin: 1rem auto;
+}
+.lista-redes-sociais ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.lista-redes-sociais ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.lista-redes-sociais ul li a:hover {
+   color: red;
+}
+
+.bola{
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+

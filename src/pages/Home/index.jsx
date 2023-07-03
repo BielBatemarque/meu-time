@@ -1,10 +1,10 @@
 
 import { Menu } from '../../components/Menu/Menu';
-import { Button } from '../../components/button';
 import { Card } from '../../components/Card/index';
 import campo from '../../assets/campo.png';
 
 import './Home.css';
+import { Footer } from '../../components/Footer';
 export const Home = () => {
     return(
         <div className="Home">
@@ -27,14 +27,15 @@ export const Home = () => {
             </section>
             <section className='cardList'>
                 <Card title={'Ligas'} />
-                <Card  title={'Times'}/>
-                <Card  title={'Temporadas'}/>
-                <Card  title={'Jogadores'}/>
+                <Card title={'Times'}/>
+                <Card title={'Temporadas'}/>
+                <Card title={'Jogadores'}/>
             </section>
             <section>
                 <p>apresenta times e ligas</p>
-                <Button text={'Lougout'} action={() => console.log('deslogar criando um estado global da função que seta algumas informações como logado')}/>
             </section>
+
+            <Footer />
         </div>
     );
 }
