@@ -12,7 +12,6 @@ export const Footer = () => {
             
             <p>&copy; Todos os Diretitos reservados a Gabriel Batemarque</p>
             <div className="bola">
-
                 <FaFutbol className='bola'/>
             </div>
             <div className='lista-redes-sociais'>
