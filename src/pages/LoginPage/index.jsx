@@ -10,7 +10,7 @@ export const LoginPage = () => {
   const { dispatch } = useContext(globalContext);
   const navigate = useNavigate(); // Importar useNavigate para redirecionamento
 
-  const realizaLogin = async () => {
+  const handleLogin = async () => {
     const url = 'https://api-football-v1.p.rapidapi.com/v3/timezone';
     const options = {
       method: 'GET',
@@ -39,7 +39,7 @@ export const LoginPage = () => {
           onChange={(e) => setKey(e.target.value)}
         />
 
-        <Button text={'Validar'} action={() => realizaLogin()} />
+        <Button text={'Validar'} action={() => handleLogin()} />
       </div>
 
       <div className="img">
