@@ -51,19 +51,8 @@ export const Home = () => {
                 </div>
 
             </section>
-            <section className='cardList'>
-                <MemoizedCard title={'Ligas'} logo={imageLeague} />
-                <Card title={'Times'} />
-                <Card title={'Temporadas'} />
-                <Card title={'Jogadores'} />
-            </section>
-            <section>
-                <p>apresenta times e ligas</p>
-            </section>
 
             <Footer />
         </div>
     );
 }
-
-const MemoizedCard = React.memo(Card);

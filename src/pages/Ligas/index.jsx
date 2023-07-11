@@ -6,6 +6,7 @@ import { Loader } from '../../components/Loader/index';
 import { Input } from '../../components/Input/index';
 import { Button } from '../../components/button/index';
 import { Card } from '../../components/Card/index';
+import { Footer } from '../../components/Footer';
 
 
 export const Ligas = () => {
@@ -92,6 +93,7 @@ export const Ligas = () => {
             <div className="button-container">
                 <Button text={'carregar mais ligas'} action={loadMoreLeagues} disabled={noMoreLeague}/>
             </div>
+            <Footer />
         </div>
     );
 }

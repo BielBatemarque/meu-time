@@ -2,9 +2,6 @@ import {Routes, Route} from 'react-router-dom';
 import { Home } from '../../pages/Home/index';
 import { Ligas } from '../../pages/Ligas/index';
 import { LoginPage } from '../../pages/LoginPage';
-import { Jogadores } from '../../pages/Jogadores/index';
-import { Temporadas } from '../Temporadas/index';
-import { Times } from '../../pages/Times/index'
 import { ViewMoreLeague } from '../ViewMoreLeague';
 
 export const Content = () => {
@@ -12,9 +9,6 @@ export const Content = () => {
         <Routes>
             <Route path='/' element={<LoginPage />} exact/>
             <Route path='/Home' element={<Home />} exact/>
-            <Route path='/Jogadores' element={<Jogadores />}/>
-            <Route path='/Temporadas' element={<Temporadas />}/>
-            <Route path='/Times' element={<Times />}/>
             <Route path='/Ligas' element={<Ligas />} exact/>
             <Route path='/ViewMoreLeague/:id' element={<ViewMoreLeague />} />
         </Routes>

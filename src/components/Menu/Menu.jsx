@@ -8,16 +8,10 @@ export const Menu = () => {
                 <nav className='items'>
                     <ul>
                         <li>
+                            <MenuItem text={'Home'} link={'/home'}/>
+                        </li>
+                        <li>
                             <MenuItem text={'Ligas'} link={'/Ligas'} />
-                        </li>
-                        <li>
-                            <MenuItem text={'Jogadores'} link={'/Jogadores'}/>
-                        </li>
-                        <li>
-                            <MenuItem text={'Temporadas'} link={'/Temporadas'}/>
-                        </li>
-                        <li>
-                            <MenuItem text={'Times'}  link={'/Times'}/>
                         </li>
                     </ul>
                 </nav>
