@@ -4,7 +4,7 @@ import { Ligas } from '../../pages/Ligas/index';
 import { LoginPage } from '../../pages/LoginPage';
 import { Jogadores } from '../../pages/Jogadores/index';
 import { Temporadas } from '../Temporadas/index';
-import { Times } from '../Times'
+import { Times } from '../../pages/Times/index'
 import { ViewMoreLeague } from '../ViewMoreLeague';
 
 export const Content = () => {

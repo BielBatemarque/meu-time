@@ -1,4 +1,4 @@
-import { Menu } from '../Menu/Menu';
+import { Menu } from '../../components/Menu/Menu';
 import './Times.css';
 
 export const Times = () => {
