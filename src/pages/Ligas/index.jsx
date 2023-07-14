@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState, useMemo } from 'react';
-import { Menu } from '../../components/Menu/Menu';
 import './Ligas.css';
 import { options } from '../../data/data';
 import { Loader } from '../../components/Loader/index';
@@ -65,7 +64,6 @@ export const Ligas = () => {
     console.log(ligas, searchValue);
     return(
         <div className="Ligas">
-            <Menu />
             <h1 className='mainTitle'>Ligas</h1>
             <Input text={'Pesquisar Liga'} search={handleChange}/>
             <div className='listaLigas'>

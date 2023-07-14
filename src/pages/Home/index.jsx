@@ -1,5 +1,3 @@
-import { Menu } from '../../components/Menu/Menu';
-import { Card } from '../../components/Card/index';
 import campo from '../../assets/campo.png';
 import { globalContext } from '../../context/globalContext';
 import './Home.css';
@@ -10,6 +8,10 @@ import { Footer } from '../../components/Footer/index';
 export const Home = () => {
     const { state } = useContext(globalContext);
     const [imageLeague, setImageLeague] = useState('');
+
+    useEffect(() => {
+        console.log(state);
+    }, [state]);
 
     useEffect(() => {
         loadLeagueImage();
@@ -34,7 +36,6 @@ export const Home = () => {
 
     return (
         <div className="Home">
-            <Menu />
             <div className='divTitle'>
                 <h1>Meu-Time</h1>
             </div>

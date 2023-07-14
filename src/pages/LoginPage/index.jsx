@@ -1,5 +1,5 @@
 import './LoginPage.css';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button/index';
 import banner from '../../assets/banner.png';
@@ -7,7 +7,7 @@ import { globalContext } from '../../context/globalContext';
 
 export const LoginPage = () => {
   const [key, setKey] = useState('');
-  const { dispatch } = useContext(globalContext);
+  const { dispatch, state } = useContext(globalContext);
   const navigate = useNavigate(); // Importar useNavigate para redirecionamento
 
   const handleLogin = async () => {
@@ -28,6 +28,10 @@ export const LoginPage = () => {
       console.log(login.status);
     }
   };
+
+  useEffect(() => {
+      console.log(state);
+  }, [state]);
 
   return (
     <div className="loginPage">
