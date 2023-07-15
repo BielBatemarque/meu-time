@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Menu } from '../Menu/Menu';
 import './ViewMoreLeague.css';
 import { useParams } from 'react-router-dom';
 import { options } from '../../data/data';
@@ -29,7 +28,6 @@ export const ViewMoreLeague = ({ match }) => {
 
     return(
         <div className="ViewMoreLeague">
-            <Menu />
             {inforLigas.length === 0 ? <div className='carregando'><Loader text={'Carregando'}/></div> : 
                 inforLigas.map(r => (
                     <div key={r.league.id} className='info'>
