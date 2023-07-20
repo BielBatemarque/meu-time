@@ -4,7 +4,7 @@ import { Ligas } from '../../pages/Ligas/index';
 import { LoginPage } from '../../pages/LoginPage';
 import { ViewMoreLeague } from '../ViewMoreLeague';
 import { ViewMoreYear } from '../ViewMoreYear/index';
-
+import { Paises } from '../../pages/Paises/index';
 export const Content = () => {
     return(
         <Routes>
@@ -13,6 +13,7 @@ export const Content = () => {
             <Route path='/Ligas' element={<Ligas />} exact/>
             <Route path='/ViewMoreLeague/:id' element={<ViewMoreLeague />} />
             <Route path='/ViewMoreYear' element={<ViewMoreYear />} />
+            <Route path='/Paises' element={<Paises />} />
         </Routes>
     );
 }

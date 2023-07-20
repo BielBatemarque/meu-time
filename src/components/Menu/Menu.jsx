@@ -13,6 +13,9 @@ export const Menu = () => {
                         <li>
                             <MenuItem text={'Ligas'} link={'/Ligas'} />
                         </li>
+                       <li>
+                            <MenuItem text={'Paises'} link={'/Paises'} />
+                        </li> 
                     </ul>
                 </nav>
             </div>
