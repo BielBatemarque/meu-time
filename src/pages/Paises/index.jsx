@@ -22,7 +22,7 @@ export const Paises = () => {
 
     return(
         <div className="countries">
-           
+           {}
         </div>
     );
 }
