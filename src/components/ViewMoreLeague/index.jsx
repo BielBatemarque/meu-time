@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
 import './ViewMoreLeague.css';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { options } from '../../data/data';
 import { Loader } from '../Loader';
+import { Link } from 'react-router-dom';
+import { ViewMoreYear } from '../ViewMoreYear/index';
 
 export const ViewMoreLeague = ({ match }) => {
     const { id } = useParams();
@@ -42,6 +44,7 @@ export const ViewMoreLeague = ({ match }) => {
                                         <h3>Ano: {s.year}</h3>
                                         <p>Começo: {s.start}</p>
                                         <p>Fim: {s.end}</p>
+                                        <Link className='direcionamento' to={'/ViewMoreYear'}>Ver Mais</Link>
                                     </div>
                                 </div>
                                 ))}
