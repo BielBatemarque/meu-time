@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Card = ({ logo, title, description, cardId }) => {
     const [id, setId] = useState(null);
-    console.log(id);
+    // console.log(id);
     const linkTo = `/ViewMoreLeague/:${id}`;
 
     return(
