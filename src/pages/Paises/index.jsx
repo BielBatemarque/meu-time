@@ -4,12 +4,14 @@ import { options } from '../../data/data';
 import { Card } from '../../components/Card/index';
 import { Loader } from '../../components/Loader/index';
 import { Input } from '../../components/Input/index';
+import { Button } from '../../components/button/index';
 
 export const Paises = () => {
     const [paises, setPaises] = useState([]);
     const [search, setSearch] = useState('');
     const [Allcountries, setAllContries] = useState([]);
     const [paisesPorPagina] = useState(15);
+    const [page, setPage] = useState(0);
 
     useEffect(() => {
         handleFetch();
@@ -39,9 +41,17 @@ export const Paises = () => {
         setSearch(value);
     }
 
-    console.log(search);
+    const loadMoreContries = () => {
+        const nextPage = page + paisesPorPagina;
+        const nextPaises = Allcountries.slice(nextPage, nextPage + paisesPorPagina);
 
-    
+        paises.push(...nextPaises);
+        setPage(nextPage);
+    }
+
+
+
+    console.log(search);
     console.log(paises);
 
     return(
@@ -58,6 +68,10 @@ export const Paises = () => {
                 key={index}
                 />
             )) : <Loader />}
+            </div>
+
+            <div className="button-container">
+                <Button text={'carregar mais Países'} action={loadMoreContries}/>
             </div>
         </div>
     );
