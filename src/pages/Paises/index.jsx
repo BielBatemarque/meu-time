@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import './Paises.css'
 import { options } from '../../data/data';
 import { Card } from '../../components/Card/index';
@@ -49,6 +49,14 @@ export const Paises = () => {
         setPage(nextPage);
     }
 
+    const filteredCountries = useMemo(() => {
+        if(!!search){
+            return Allcountries.filter(pais => pais.name.toLowerCase().includes(search.toLowerCase()));
+        }else{
+            return paises;
+        }
+    }, [search, Allcountries, paises]);
+
 
 
     console.log(search);
@@ -60,14 +68,28 @@ export const Paises = () => {
             <Input  text={'Pesquise Por nome do País'} search={handleChange}/>
 
             <div className="lista-paises">
-            {paises.length > 0 ? paises.map((pais, index) => (
+           {
+            filteredCountries > 0 ? 
+            !paises ?
+                <Loader text={'carregando'} />
+            :
+            paises.map((pais, index) => (
                 <Card 
                 title={pais.name}
                 logo={pais.flag}
                 description={pais.code}
                 key={index}
                 />
-            )) : <Loader />}
+            )) :
+            filteredCountries.map((pais, index) => (
+                <Card 
+                title={pais.name}
+                logo={pais.flag}
+                description={pais.code}
+                key={index}
+                />
+            ))
+           }
             </div>
 
             <div className="button-container">
